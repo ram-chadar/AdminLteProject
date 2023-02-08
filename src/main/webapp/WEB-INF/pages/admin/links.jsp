@@ -1,4 +1,4 @@
-<%@page import="com.javabykiran.model.links"%>
+<%@page import="com.javabykiran.model.Links"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -122,7 +122,7 @@
 			</section>
 	
 			<%
-				ArrayList<links> list =(ArrayList<links>) request.getAttribute("data");
+				ArrayList<Links> list =(ArrayList<Links>) request.getAttribute("data");
 			%>
 	
 			<!-- Main content -->
@@ -145,7 +145,7 @@
 									
 										<%
 											int i = 0;
-											for (links name : list) {
+											for (Links name : list) {
 												i++;
 										%>
 									<tr>

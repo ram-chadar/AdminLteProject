@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.javabykiran.model.operators"%>
+<%@page import="com.javabykiran.model.Operators"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -86,7 +86,7 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview"><a href="dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li><a href="users.html"><i class="fa fa-user"></i> <span>Users</span></a></li>
+            <li><a href="/userspage"><i class="fa fa-user"></i> <span>Users</span></a></li>
             <li class="active"><a href="operators"><i class="fa fa-retweet"></i> <span>Operators</span></a></li>
             <li class="treeview"><a href="links"><i class="fa fa-external-link"></i> <span>     Useful Links</span></a></li>
             <li class="treeview"><a href="downloads">
@@ -112,7 +112,7 @@
         </section>
 
 			<%
-				ArrayList<operators> list =(ArrayList<operators>) request.getAttribute("data");
+				ArrayList<Operators> list =(ArrayList<Operators>) request.getAttribute("data");
 			%>
         <!-- Main content -->
         <section class="content">
@@ -138,7 +138,7 @@
                     <%
 		int i=0;
        
-		for (operators name:list) {
+		for (Operators name:list) {
 			i++;
           %>    
                     <tr>

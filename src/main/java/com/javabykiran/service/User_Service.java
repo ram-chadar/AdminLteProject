@@ -13,8 +13,8 @@ import com.javabykiran.model.StateMaster;
 import com.javabykiran.model.User;
 import com.javabykiran.model.Users;
 import com.javabykiran.model.Downloads_list;
-import com.javabykiran.model.links;
-import com.javabykiran.model.operators;
+import com.javabykiran.model.Links;
+import com.javabykiran.model.Operators;
 
 
 @Service
@@ -78,11 +78,11 @@ public class User_Service {
 		return user_Dao.showDownloadlist();
 	}
 
-	public List<links> showlistoflinks() {
+	public List<Links> showlistoflinks() {
 		return user_Dao.showlistoflinks();
 	}
 
-	public List<operators> showlistofoperators() {
+	public List<Operators> showlistofoperators() {
 		return user_Dao.showlistofoperators();
 	}
 	

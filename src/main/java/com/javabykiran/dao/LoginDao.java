@@ -24,7 +24,7 @@ public class LoginDao {
 		User dbUser = null;
 
 		Criteria criteria = session.createCriteria(User.class);
-		criteria.add(Restrictions.eq("username", user.getUsername()));
+		criteria.add(Restrictions.eq("email", user.getEmail()));
 
 		List<User> list = criteria.list();
 		if (!list.isEmpty()) {

@@ -15,8 +15,8 @@ import com.javabykiran.model.StateMaster;
 import com.javabykiran.model.User;
 import com.javabykiran.model.Users;
 import com.javabykiran.model.Downloads_list;
-import com.javabykiran.model.links;
-import com.javabykiran.model.operators;
+import com.javabykiran.model.Links;
+import com.javabykiran.model.Operators;
 
 @Repository
 public class User_Dao {
@@ -96,16 +96,16 @@ public class User_Dao {
 		return list;
 	}
 
-	public List<links> showlistoflinks() {
+	public List<Links> showlistoflinks() {
 		Session session = sf.openSession();
-		List<links> list=session.createCriteria(links.class).list();
+		List<Links> list=session.createCriteria(Links.class).list();
 		
 		return list;
 	}
 
-	public List<operators> showlistofoperators() {
+	public List<Operators> showlistofoperators() {
 		Session session = sf.openSession();
-		List<operators> list=session.createCriteria(operators.class).list();
+		List<Operators> list=session.createCriteria(Operators.class).list();
 		
 		return list;
 	}

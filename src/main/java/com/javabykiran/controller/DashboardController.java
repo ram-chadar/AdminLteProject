@@ -13,8 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.javabykiran.model.Users;
 import com.javabykiran.model.Downloads_list;
-import com.javabykiran.model.links;
-import com.javabykiran.model.operators;
+import com.javabykiran.model.Links;
+import com.javabykiran.model.Operators;
 import com.javabykiran.service.User_Service;
 
 @Controller
@@ -40,7 +40,7 @@ public class DashboardController {
 	public ModelAndView operatorspage() {
 		ModelAndView mv = new ModelAndView();
 		if (userService.showDownloadlist() != null) {
-			List<operators> l = (List<operators>) userService.showlistofoperators();
+			List<Operators> l = (List<Operators>) userService.showlistofoperators();
 			mv.setViewName("operators");
 			mv.addObject("data", userService.showlistofoperators());
 		} else {
@@ -69,7 +69,7 @@ public class DashboardController {
 	public ModelAndView linkspage() {
 		ModelAndView mv = new ModelAndView();
 		if (userService.showDownloadlist() != null) {
-			List<links> l = (List<links>) userService.showlistoflinks();
+			List<Links> l = (List<Links>) userService.showlistoflinks();
 			mv.setViewName("links");
 			mv.addObject("data", userService.showlistoflinks());
 		} else {
